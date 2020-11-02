@@ -44,7 +44,7 @@ UNLOCK TABLES;
 
 JOIN Care_Provider ON  Employee.employeeID = Care_Provider.careProviderID WHERE Employee.employeeID = 1;
 
-SELECT careproviderId, firstName, lastName, contactNumber, address, email FROM Care_Provider;
+SELECT careproviderId, firstName, lastName, contactNumber, address, email FROM Care_Provider WHERE careproviderId = 1102 ;
 DELETE FROM Care_Provider WHERE careProviderID = 1203 ;
 
 LOCK TABLES Admin WRITE;
@@ -54,5 +54,5 @@ UNLOCK TABLES;
 
 JOIN Admin ON  Employee.employeeID = Admin.adminID WHERE Employee.employeeID = 1;
 
-SELECT adminId, firstName, lastName, contactNumber, address, email FROM Care_Provider;
+SELECT adminId, firstName, lastName, contactNumber, address, email FROM Admin WHERE adminId = 1202 ;
 DELETE FROM Admin WHERE adminID = 1102 ;
