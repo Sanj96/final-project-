@@ -13,8 +13,7 @@ INSERT INTO Revision_History VALUES
 (80001,'Tested Negative for Covid','2020/01/12','Dr Hemsworth',1001),(80002,'Tested Negative for Covid','2020/05/01','Dr Hemsworth',1003);
 UNLOCK TABLES;
 
-SELECT historyID AS id,
-		historyBody,
+SELECT historyID AS id, historyBody,
 		revisionDate,
 		writtenBy,
 		patientId

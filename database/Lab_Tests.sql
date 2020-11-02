@@ -10,3 +10,5 @@ LOCK TABLES Lab_Tests WRITE;
 INSERT INTO Lab_Tests VALUES
 (40001,'Blood work:Details','2020/01/12',1002),(40002,'Insulin report:Details','2020/05/01',1003);
 UNLOCK TABLES;
+
+SELECT 

@@ -35,12 +35,24 @@ INSERT INTO Employee VALUES
 (1203,'LeyRoy','Kingsley',123456,'Calgary''Leyroy_kingsley@gmail.com');
 UNLOCK TABLES;
 
+CREATE INDEX IF NOT EXISTS employeeIndex ON Employee (employeeID);
+
 LOCK TABLES Care_Provider WRITE;
 INSERT INTO Care_Provider VALUES
 (1101),(1102),(1103);
 UNLOCK TABLES;
 
+JOIN Care_Provider ON  Employee.employeeID = Care_Provider.careProviderID WHERE Employee.employeeID = 1;
+
+SELECT careproviderId, firstName, lastName, contactNumber, address, email FROM Care_Provider;
+DELETE FROM Care_Provider WHERE careProviderID = 1203 ;
+
 LOCK TABLES Admin WRITE;
 INSERT INTO Admin VALUES
 (1201),(1202),(1203);
 UNLOCK TABLES;
+
+JOIN Admin ON  Employee.employeeID = Admin.adminID WHERE Employee.employeeID = 1;
+
+SELECT adminId, firstName, lastName, contactNumber, address, email FROM Care_Provider;
+DELETE FROM Admin WHERE adminID = 1102 ;

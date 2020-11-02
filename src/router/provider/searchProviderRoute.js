@@ -26,7 +26,7 @@ function pullSearchProviderRoute(req, res, next) {
 		res.redirect('/logout');
 	} else {
 		let query =
-			'SELECT careproviderId, firstName, lastName, contactNumber, address, email FROM Care_Provider WHERE careprovider_firstname =? careproviderId =?';
+			'SELECT careproviderId, firstName, lastName, contactNumber, address, email FROM Care_Provider WHERE careproviderId =?';
 		db.query(query, [ req.body.careProvider_id ], (error, results, fields) => {
 			if (results < 1 || results == undefined) {
 				req.flash('error', 'No care providers found');
