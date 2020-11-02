@@ -1,0 +1,12 @@
+CREATE TABLE Radiology(
+radiologyID INT NOT NULL PRIMARY KEY AUTO_INCREMENT, 
+details VARCHAR(100), 
+radiologyDate DATETIME,
+patientID INT,
+FOREIGN KEY (patientID) REFERENCES Patient(patientID) 
+);
+
+LOCK TABLES Radiology WRITE;
+INSERT INTO Radiology VALUES
+(30001,'CT Scan:Details','2020/01/12',1001),(30002,'MRI Scan:Details','2020/05/01',1003);
+UNLOCK TABLES;

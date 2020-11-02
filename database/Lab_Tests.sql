@@ -1,0 +1,12 @@
+CREATE TABLE Lab_Tests(
+testID INT NOT NULL PRIMARY KEY AUTO_INCREMENT, 
+details CHAR(100), 
+testDate DATETIME,
+patientID INT,
+FOREIGN KEY (patientID) REFERENCES Patient(patientID)
+);
+
+LOCK TABLES Lab_Tests WRITE;
+INSERT INTO Lab_Tests VALUES
+(40001,'Blood work:Details','2020/01/12',1002),(40002,'Insulin report:Details','2020/05/01',1003);
+UNLOCK TABLES;

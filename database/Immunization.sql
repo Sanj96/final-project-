@@ -1,0 +1,12 @@
+CREATE TABLE Immunization(
+immunizationID INT NOT NULL PRIMARY KEY AUTO_INCREMENT, 
+details CHAR(100), 
+shotDate DATETIME,
+patientID INT,
+FOREIGN KEY (patientID) REFERENCES Patient(patientID) 
+);
+
+LOCK TABLES Immunization WRITE;
+INSERT INTO Immunization VALUES
+(50001,'HPV Virus','2020/01/11',1001),(50002,'Tetanus','2020/05/11',1002);
+UNLOCK TABLES;
