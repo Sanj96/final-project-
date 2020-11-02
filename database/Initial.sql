@@ -32,6 +32,7 @@ INSERT INTO Employee VALUES
 (1103,'Joseph','Taylor',123456,'Ontario','joseph_taylor@gmail.com'),
 (1201,'Liam','Hemsworth',123456,'Vancouver','liam_hemsworth@gmail.com'),
 (1202,'Nick','Jonas',123456,'Nova Scotia','nick_jonas@gmail.ccom');
+(1203,'LeyRoy','Kingsley',123456,'Calgary''Leyroy_kingsley@gmail.com');
 UNLOCK TABLES;
 
 LOCK TABLES Care_Provider WRITE;

@@ -1,7 +1,7 @@
 {
 	"name": "database-project",
 	"version": "1.0.0",
-	"description": "FS1030 final project - electronic medical record management system",
+	"description": "- final project - EMR system",
 	"main": "router.js",
 	"scripts": {
 		"start": "nodemon --inspect src/server.js",
