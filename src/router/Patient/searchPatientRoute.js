@@ -26,7 +26,7 @@ if (req.body.search=="SearchByName"){
 
     
 db.query(
-    'SELECT * FROM Patient WHERE patient_firstname=? or patient_lastname=?',
+    'SELECT * FROM Patient WHERE firstName=? or lastName=?',
     [ req.body.user_firstName, req.body.user_lastName],
     (err, dbUsername) => {
         if (dbUsername < 1 || dbUsername == undefined) {
@@ -59,7 +59,7 @@ db.query(
 
 }else {
 db.query(
-    'SELECT * FROM patient_profile WHERE patient_healthcard=?',
+    'SELECT * FROM Patient WHERE patientID=?',
     [ req.body.user_id ],
     (err, dbUsername) => {
         if (dbUsername < 1 || dbUsername == undefined) {

@@ -42,7 +42,7 @@ next();
 } else {
     //
     let query =
-		'INSERT INTO patient_profile (patient_id,patient_firstname,patient_lastname,patient_street, patient_contact, patient_DOB, patient_city, patient_province, patient_postalcode, patient_email) VALUES(?, ?, ?, ?, ?,?,?,?,?,?)';
+		'INSERT INTO Patient (patientId, firstName, lastName, demographic, email) VALUES(?,?,?,?,?)';
 	db.query(
 		query,
 		[ req.body.patient_id req.body.patient_firstname, req.body.patient_lastname, req.body.patient_demographic, req.body.patient_email ],
